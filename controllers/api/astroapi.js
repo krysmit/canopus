@@ -1,22 +1,21 @@
-var apiKey = "";
+var apiKey = "a81e0ff5a2ac49749b6d5fa89c8f26c7";
 
 //calling API for forecast
 // function searchButtonHandler(searchInput) {
 //     console.log("forecast search input: ", searchInput);
 
    //need to fill in the city name search syntax
-    var astroURL = "https://api.ipgeolocation.io/astronomy?apiKey=API_KEY&location=New%20York,%20US";
+    var astroURL = "https://api.ipgeolocation.io/astronomy?apiKey=" + apiKey + "&location=" + {state};
     $.ajax({
         //get data from api
         url: weatherURL,
         method:"GET"
     }).then(function (data) {
-            console.log("forecast data: ", data);
             // var appendedDates = [];
             var appendHTML = 0;
 
             // <div class="card btn-primary">
-            //     <h2>Temp:${weather.main}</h2>
+            //     <h2>Sunset:${sunset}</h2>
 
             // $("#fiveday").html(appendHTML)
         
