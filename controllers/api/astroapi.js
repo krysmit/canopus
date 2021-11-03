@@ -1,12 +1,11 @@
-var apiKey = "ad4e109e5b7a1f3554d123fbf819c27f";
+var apiKey = "";
 
 //calling API for forecast
 // function searchButtonHandler(searchInput) {
 //     console.log("forecast search input: ", searchInput);
 
    //need to fill in the city name search syntax
-    var weatherURL = "api.openweathermap.org/data/2.5/weather?q=" + {city} + "&appid=" + apiKey + "&units=imperial";
-    console.log("forecast api url: ", weatherURL)
+    var astroURL = "https://api.ipgeolocation.io/astronomy?apiKey=API_KEY&location=New%20York,%20US";
     $.ajax({
         //get data from api
         url: weatherURL,
