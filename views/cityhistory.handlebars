@@ -1,19 +1,10 @@
 <!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.city}}</a>
-    </h2>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.state}}
-    </p>
-  </div>
+<div>
+
+    <h3 >Search History:</h3>
+    <div id="searchList">
+        <a></a>
+    </div>
+    
 </div>
-{{/each}}
 
