@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const fetch = require("node-fetch");
 const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
-let searchcity = document.getElementByID('searchcity').value;
-document.getElementByID('citystateBtn').addEventListener('click',search());
+var citystateBtn = document.getElementByID('citystateBtn').addEventListener('click',search());
+var searchcity = document.getElementByID('searchcity').value;
 
 function search() {
 router.get("/fetch_data", async (req, res) => {
