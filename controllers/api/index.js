@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const mailer = require('./mailer');
 
 router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
-// router.use('/clearsky', clearskyRoutes);
+router.use('/mail', mailer);
 
 module.exports = router;

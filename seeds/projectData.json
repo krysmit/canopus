@@ -1,14 +1,17 @@
 [
   {
+    "id": 1,
     "city": "Chicago",
     "state": "Illinois"
   },
   {
-    "city": "New York",
-    "state": "New York"
+    "id": 2,
+    "city": "Atlanta",
+    "state": "Georgia"
   },
   {
-    "city": "Miami",
-    "state": "Florida"
+    "id": 3,
+    "city": "Lincoln",
+    "state": "Nebraska"
   }
 ]
