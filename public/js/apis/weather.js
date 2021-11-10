@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const fetch = require("node-fetch");
 const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
-var citystateBtn = document.getElementByID('citystateBtn').addEventListener('click',search());
 var searchcity = document.getElementByID('searchcity').value;
 
-function search() {
+function citystateBtn() {
+    document.getElementByID('citystateBtn').addEventListener('click',search());
+  }
+
+function citystateBtn() {
 router.get("/fetch_data", async (req, res) => {
     console.log("/fetch_data endpoint called");
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchcity}&appid=${APIKEY}`;
@@ -23,8 +26,6 @@ router.get("/fetch_data", async (req, res) => {
     console.log(response);
     res.json(response);
 
-    
 })};
-
 
 module.exports = router;
