@@ -1,16 +1,14 @@
 <div>
-
+    
     <h2>Search History</h2>
-        <ul>
-            {{#each projects as |project| }}
-            <li>{{project.city}}, {{project.state}}</li>
-            {{/each}}
-            <li>Chicago, IL</li>
-            <li>Lincoln, Nebraska</li>
-            <li>Atlanta, Georgia</li>
-        </ul>
 
-
+    {{#each projects as |project|}}
+    <div class="row mb-4 project">
+        <p>
+        {{project.city}}, {{project.state}}</li>
+        </p>
+    </div>
+    {{/each}}
 
 </div>
 
