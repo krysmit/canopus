@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const fetch = require("node-fetch");
 
-
-
 const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
 
 router.get("/fetch_data", async (req, res) => {
@@ -11,8 +9,6 @@ router.get("/fetch_data", async (req, res) => {
     const options = {   
         "method": "GET",
     }
-
-    
 
     const response = await fetch(url, options)
     .then(res => res.json())
@@ -25,6 +21,5 @@ router.get("/fetch_data", async (req, res) => {
     console.log(response);
     res.json(response);
 
-    
 });
 module.exports = router;
