@@ -1,20 +1,21 @@
 // const fetch = require("node-fetch");
 const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
-
 var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || []
 
-$("#search-style").click(function (event){
+
+//save to local storage
+$("#citystateBtn").click(function (event){
     event.preventDefault()
-    let searchInput = $("#searchInput").val();
-    console.log("local storage search input: ", searchInput);
-    var checkArray = searchHistory.includes(searchInput);
+    let cityInput = $("#cityInput").val();
+    console.log("local storage search input: ", cityInput);
+    var checkArray = searchHistory.includes(cityInput);
 
     if (checkArray === false) {
-        searchHistory.push(searchInput);
+        searchHistory.push(cityInput);
         localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
 //adding searched items to a list
     } else {
-        searchHistory.push(searchInput);
+        searchHistory.push(cityInput);
         localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
     
         var historyButton = $("<a>").attr({
@@ -22,16 +23,37 @@ $("#search-style").click(function (event){
           href: "#",
         })
     
-    historyButton.text(searchInput);
+    historyButton.text(cityInput);
     $("#searchList").append(historyButton);
 
-    currentWeather(searchInput);
-    searchButtonHandler(searchInput);
+    currentWeather(cityInput);
+    searchButtonHandler(cityInput);
 
     }});
 
 
 
+
+
+//calling API for current weather
+function currentWeather(cityInput) {
+    console.log("current weather search input: ", cityInput);
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + APIKEY +"&units=imperial";
+     console.log("current weather api url: ", weatherURL)
+    $.ajax({
+        //get data from api
+        url: weatherURL,
+        method:"GET"
+    }).then(function (data) {
+            console.log("current weather data: ",data);
+    })   
+}
+
+
+
+
+
+    
 
 
 // var searchcity = document.getElementByID('searchcity').value;
