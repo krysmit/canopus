@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
     const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('searchhistory', { 
+    res.render('homepage', { 
       projects, 
       logged_in: req.session.logged_in 
     });
@@ -47,6 +47,7 @@ router.get('/project', withAuth, async (req, res) => {
   }
 });
 
+//if logged in, redirect request
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
