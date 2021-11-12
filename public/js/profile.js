@@ -1,46 +1,42 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
+const city = document.querySelector('#cityInput').value.trim();
 
-  const city = document.querySelector('#cityInput').value.trim();
-
-  if (city) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ city }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+if (city) {
+  const response = await fetch(`/api/projects`, {
+    method: 'POST',
+    body: JSON.stringify({ city }),
+    headers: {
+    'Content-Type': 'application/json',
+    },
     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
+if (response.ok) {
+  document.location.replace('/skyvisibility');
     } else {
-      alert('Failed to create project');
+      alert('Failed to save city');
     }
-  }
-};
+  };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/projects/${id}`, {
+//       method: 'DELETE',
+//     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete project');
+//     }
+//   }
+// };
 
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.project-list')
+//   .addEventListener('click', delButtonHandler);
 
