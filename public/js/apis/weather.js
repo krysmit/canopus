@@ -1,4 +1,4 @@
-var cityInput = document.getElementByID('cityInput').value;
+var cityInput = document.getElementByID("cityInput").value;
 
 console.log(">>>>>>weather api js page accessed<<<<<<");
 
