@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
-console.log("I WORK!!!");
 const transporter = nodemailer.createTransport(
   {
     service: "hotmail",
