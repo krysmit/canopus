@@ -49,6 +49,7 @@ $.ajax({
     $("#tablebody").append(noCity);
     $(document).ready(function(){
     });
+    console.log(JSON.stringify(data));
   }
     // FOR any results, display as such:
     else {

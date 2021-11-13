@@ -4,11 +4,13 @@
 
     {{#each projects as |project|}}
     <div class="row mb-4 project">
-        <p>
-        {{project.city}}, {{project.state}}</li>
-        </p>
+        <ul>
+        <li>{{project.city}}, {{project.state}}</li>
+        </ul>
     </div>
     {{/each}}
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/weather.js"></script>
