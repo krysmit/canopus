@@ -13,5 +13,35 @@
     "id": 3,
     "city": "Lincoln",
     "state": "Nebraska"
-  }
+  },
+  {
+    "id": 4,
+    "city": "Indianapolis",
+    "state": "Indiana"
+  },
+  {
+    "id": 5,
+    "city": "Boston",
+    "state": "Massachusets"
+  },
+  {
+    "id": 6,
+    "city": "Los Angeles",
+    "state": "California"
+  },
+  {
+    "id": 7,
+    "city": "New York City",
+    "state": "New York"
+  },
+  {
+    "id": 8,
+    "city": "Philadelphia",
+    "state": "Massachusetts"
+  },
+  {
+    "id": 9,
+    "city": "Houston",
+    "state": "Texas"
+  }  
 ]
