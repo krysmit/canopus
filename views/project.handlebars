@@ -8,6 +8,21 @@
       <button id="citystateBtn">Submit</button>
     </form>
 
+
+     </div>
+  {{!-- below appends markup from ajax call in weather.js --}}
+      <div class="skyclearInfo container">
+        <h2 class="skyInfoTitle">IS IT CLEAR THO?</h2>
+        <table class="table-section">
+          <tbody id="tablebody">
+            {{!-- append happens here --}}
+          </tbody>
+        </table>
+        <br>
+      </div>
+    </div>
+
+
 <br><br><br>
 
     <h3>Weekly Newsletter</h3>
@@ -22,5 +37,6 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/mailer.js"></script>
-{{!-- <script src="/js/apis/weather.js"></script> --}}
+<script src="/js/weather.js"></script>
