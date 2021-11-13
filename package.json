@@ -1,5 +1,5 @@
 {
-  "name": "space_db",
+  "name": "crowdfund_db",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
